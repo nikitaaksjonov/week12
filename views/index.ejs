@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>My Favorite Movie</title>
+</head>
+<body>
+    
+    
+    <div class="parallax"></div>
+    
+    <div class="container movie-card" >
+        <div class="kurwa1">
+            <div class="movie-poster-container">
+                <img src= "<%=poster%>" alt="Free Guy Poster">
+            </div>
+        </div>
+        <div class="kurwa2">
+            <div class="form-container">
+                <form action="/search" method="POST">
+                    <input type="text"name="movieTitle" placeholder="A movie title">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            <h2 class="movie-title"><%= dataTorender.title%></h2>
+        <p class="movie-genres">
+            <span class="movie-rating">PG-13</span>  
+            <span class="release-date"><%=releasedate%> </span>
+            <span class="genres"><%=genres%></span>
+            <span class="movie-duration"><%=runTime%></span>
+        </p>
+        
+        <div class="movie-info-container">
+            <p class="movie-info-quote"><%= dataTorender.tagline%></p>
+            <h2 class="movie-info-overview-title">Overview</h2>
+            <p class="movie-info-overview"><%= dataTorender.overview%></p>
+            
+        </div>
+        </div>
+            
+        
+        
+        
+    </div>
+    
+    <div class="parallax"></div>
+    <footer>
+        <h3>Find me to discuss the movie</h3>
+        <ul>
+            <li> <a href="#">Twitter <i class="fab fa-twitter"></i></a></li>
+            <li> <a href="#">Instagram <i class="fab fa-instagram"></i></a> </li>
+            <li> <a href="#">Facebook <i class="fab fa-facebook"></i></a> </li>
+        </ul>
+        <p>Nikita Aks. &#169; <span class="year"><%= year%></span></p>
+    </footer>
+    
+    
+    <script src="https://kit.fontawesome.com/0761e6dde5.js" crossorigin="anonymous"></script>
+</body>
+</html>
